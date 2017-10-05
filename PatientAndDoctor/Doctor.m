@@ -9,5 +9,17 @@
 #import "Doctor.h"
 
 @implementation Doctor
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _patients = [NSMutableArray new];
+    }
+    return self;
+}
+-(void)patientVisit:(Patient*)patient{
+    if([patient validHealthCard]){
+        [self.patients addObject:patient];
+    }
+}
 @end
