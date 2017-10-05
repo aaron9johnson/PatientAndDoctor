@@ -8,6 +8,12 @@
 
 #import "Doctor.h"
 
+@interface Patient ()
+
+@property (nonatomic, readwrite) NSMutableArray *prescriptions;
+
+@end
+
 @implementation Doctor
 - (instancetype)init
 {
@@ -24,7 +30,8 @@
 }
 -(void)requestMedication:(Patient*)patient{
     if([self.patients containsObject:patient]){
-        
+        [patient.prescriptions addObject:[NSString stringWithFormat:@"Cure for: %@", patient.symptoms]];
     }
+    
 }
 @end

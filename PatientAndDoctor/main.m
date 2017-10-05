@@ -7,11 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Doctor.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Doctor *drSmith = [Doctor new];
+        Patient *bob = [Patient new];
+        bob.age = 30;
+        bob.name = @"bob";
+        [drSmith patientVisit:bob];
+        
+        bob.symptoms = @"Pink Eye";
+        [drSmith requestMedication:bob];
+        
+        bob.symptoms = @"Strep Throat";
+        [drSmith requestMedication:bob];
+        
+        NSLog(@"%@",[bob printPrescriptions]);
     }
     return 0;
 }
