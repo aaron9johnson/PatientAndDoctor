@@ -22,4 +22,9 @@
         [self.patients addObject:patient];
     }
 }
+-(void)requestMedication:(Patient*)patient{
+    if([self.patients containsObject:patient]){
+        
+    }
+}
 @end

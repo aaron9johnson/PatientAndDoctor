@@ -14,4 +14,5 @@
 @property (nonatomic) NSString *specialization;
 @property (nonatomic) NSMutableArray *patients;
 -(void)patientVisit:(Patient*)patient;
+-(void)requestMedication:(Patient*)patient;
 @end
