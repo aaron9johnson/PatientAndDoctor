@@ -30,7 +30,10 @@
 }
 -(void)requestMedication:(Patient*)patient{
     if([self.patients containsObject:patient]){
-        [patient.prescriptions addObject:[NSString stringWithFormat:@"Cure for: %@", patient.symptoms]];
+        for(NSString *any in patient.symptoms){
+            [patient.prescriptions addObject:[NSString stringWithFormat:@"Cure for: %@", any]];
+        }
+        
     }
     
 }

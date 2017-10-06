@@ -10,7 +10,8 @@
 
 @interface Patient : NSObject
 @property (nonatomic) NSString *name;
-@property (nonatomic) NSString *symptoms;
+@property (nonatomic) bool healthCard;
+@property (nonatomic) NSArray *symptoms;
 @property (nonatomic) int age;
 @property (nonatomic, readonly) NSMutableArray *prescriptions;
 -(bool)validHealthCard;

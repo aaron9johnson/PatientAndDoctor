@@ -14,11 +14,12 @@
     self = [super init];
     if (self) {
         _prescriptions = [NSMutableArray new];
+        _healthCard = true;
     }
     return self;
 }
 -(bool)validHealthCard{
-    return true;
+    return self.healthCard;
 }
 -(NSString *)printPrescriptions{
     NSMutableString *temp = [NSMutableString new];

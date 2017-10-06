@@ -17,10 +17,10 @@ int main(int argc, const char * argv[]) {
         bob.name = @"bob";
         [drSmith patientVisit:bob];
         
-        bob.symptoms = @"Pink Eye";
+        bob.symptoms = @[@"Pink Eye", @"Bad Breath"];
         [drSmith requestMedication:bob];
         
-        bob.symptoms = @"Strep Throat";
+        bob.symptoms = @[@"Strep Throat"];
         [drSmith requestMedication:bob];
         
         NSLog(@"%@",[bob printPrescriptions]);
